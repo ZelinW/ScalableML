@@ -1,0 +1,217 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/03/12 12:07:16 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/03/12 12:07:46 INFO SparkContext: Running Spark version 3.0.1
+21/03/12 12:07:46 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/03/12 12:07:46 INFO ResourceUtils: ==============================================================
+21/03/12 12:07:46 INFO ResourceUtils: Resources for spark.driver:
+
+21/03/12 12:07:46 INFO ResourceUtils: ==============================================================
+21/03/12 12:07:46 INFO SparkContext: Submitted application: Q2_A
+21/03/12 12:07:46 INFO SecurityManager: Changing view acls to: acy20zw
+21/03/12 12:07:46 INFO SecurityManager: Changing modify acls to: acy20zw
+21/03/12 12:07:46 INFO SecurityManager: Changing view acls groups to: 
+21/03/12 12:07:46 INFO SecurityManager: Changing modify acls groups to: 
+21/03/12 12:07:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acy20zw); groups with view permissions: Set(); users  with modify permissions: Set(acy20zw); groups with modify permissions: Set()
+21/03/12 12:07:48 INFO Utils: Successfully started service 'sparkDriver' on port 37619.
+21/03/12 12:07:48 INFO SparkEnv: Registering MapOutputTracker
+21/03/12 12:07:48 INFO SparkEnv: Registering BlockManagerMaster
+21/03/12 12:07:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/03/12 12:07:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/03/12 12:07:48 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/03/12 12:07:48 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acy20zw/blockmgr-e5bdc091-b3fb-42b6-b04b-faeabf0a61a2
+21/03/12 12:07:48 INFO MemoryStore: MemoryStore started with capacity 26.5 GiB
+21/03/12 12:07:48 INFO SparkEnv: Registering OutputCommitCoordinator
+21/03/12 12:07:49 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/03/12 12:07:49 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node149.shef.ac.uk:4040
+21/03/12 12:07:50 INFO Executor: Starting executor ID driver on host sharc-node149.shef.ac.uk
+21/03/12 12:07:50 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40764.
+21/03/12 12:07:50 INFO NettyBlockTransferService: Server created on sharc-node149.shef.ac.uk:40764
+21/03/12 12:07:50 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/03/12 12:07:50 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node149.shef.ac.uk, 40764, None)
+21/03/12 12:07:50 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node149.shef.ac.uk:40764 with 26.5 GiB RAM, BlockManagerId(driver, sharc-node149.shef.ac.uk, 40764, None)
+21/03/12 12:07:50 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node149.shef.ac.uk, 40764, None)
+21/03/12 12:07:50 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node149.shef.ac.uk, 40764, None)
+21/03/12 12:07:53 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acy20zw/com6012/ScalableML/acy20zw_200206297_AS1/HPC/spark-warehouse').
+21/03/12 12:07:53 INFO SharedState: Warehouse path is 'file:/home/acy20zw/com6012/ScalableML/acy20zw_200206297_AS1/HPC/spark-warehouse'.
+=============A=============
+21/03/12 12:12:30 WARN BlockManager: Task 329 already completed, not releasing lock for rdd_29_102
+21/03/12 12:12:35 WARN BlockManager: Task 342 already completed, not releasing lock for rdd_29_115
+21/03/12 12:15:15 WARN BlockManager: Task 722 already completed, not releasing lock for rdd_44_169
+21/03/12 12:15:26 WARN BlockManager: Task 749 already completed, not releasing lock for rdd_44_196
+21/03/12 12:20:26 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/03/12 12:20:26 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/03/12 12:20:27 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+21/03/12 12:20:27 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+The defualt ALS
++-----------+------------------+------------------+------------------+
+|Train Split|              RMSE|               MSE|               MAR|
++-----------+------------------+------------------+------------------+
+|        0.5|0.7896793062175791| 0.623593406668277|0.5990842201492333|
+|       0.65|0.8089949846142259|0.6544728851309717|0.6093199305281283|
+|        0.8|0.8608773279870094| 0.741109773842053|0.6460297256826186|
++-----------+------------------+------------------+------------------+
+
+ALS with maxIter=10
++-----------+------------------+------------------+------------------+
+|Train Split|              RMSE|               MSE|               MAR|
++-----------+------------------+------------------+------------------+
+|        0.5|0.7882985353618639|0.6214145808536597|0.5972089229732394|
+|       0.65|0.8076716767749458|0.6523335374644526|0.6071550861141639|
+|        0.8|0.8592962842680716|0.7383901041569144|0.6437604713556652|
++-----------+------------------+------------------+------------------+
+
+ALS with regParam=0.1
++-----------+------------------+------------------+------------------+
+|Train Split|              RMSE|               MSE|               MAR|
++-----------+------------------+------------------+------------------+
+|        0.5|0.7896793062175791| 0.623593406668277|0.5990842201492333|
+|       0.65|0.8076716767749458|0.6523335374644526|0.6071550861141639|
+|        0.8|0.8592962842680716|0.7383901041569144|0.6437604713556652|
++-----------+------------------+------------------+------------------+
+
+=============B=============
+====1====
+Top3 clusters of trainset with 0.5
++--------+-----+
+|clusters|count|
++--------+-----+
+|0       |12276|
+|13      |11836|
+|8       |11127|
++--------+-----+
+
+Top3 clusters of trainset with 0.65
++--------+-----+
+|clusters|count|
++--------+-----+
+|10      |17032|
+|1       |16985|
+|6       |14257|
++--------+-----+
+
+Top3 clusters of trainset with 0.80
++--------+-----+
+|clusters|count|
++--------+-----+
+|6       |20995|
+|10      |19019|
+|1       |16497|
++--------+-----+
+
+====2====
+===For the first split with 0.5===
+21/03/12 13:41:35 ERROR Utils: Uncaught exception in thread executor-heartbeater
+java.lang.NullPointerException
+	at org.apache.spark.util.CollectionAccumulator.isZero(AccumulatorV2.scala:457)
+	at org.apache.spark.executor.Executor.$anonfun$reportHeartBeat$2(Executor.scala:902)
+	at org.apache.spark.executor.Executor.$anonfun$reportHeartBeat$2$adapted(Executor.scala:902)
+	at scala.collection.TraversableLike.$anonfun$filterImpl$1(TraversableLike.scala:256)
+	at scala.collection.Iterator.foreach(Iterator.scala:941)
+	at scala.collection.Iterator.foreach$(Iterator.scala:941)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1429)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at scala.collection.TraversableLike.filterImpl(TraversableLike.scala:255)
+	at scala.collection.TraversableLike.filterImpl$(TraversableLike.scala:249)
+	at scala.collection.AbstractTraversable.filterImpl(Traversable.scala:108)
+	at scala.collection.TraversableLike.filterNot(TraversableLike.scala:355)
+	at scala.collection.TraversableLike.filterNot$(TraversableLike.scala:355)
+	at scala.collection.AbstractTraversable.filterNot(Traversable.scala:108)
+	at org.apache.spark.executor.Executor.$anonfun$reportHeartBeat$1(Executor.scala:902)
+	at scala.collection.Iterator.foreach(Iterator.scala:941)
+	at scala.collection.Iterator.foreach$(Iterator.scala:941)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1429)
+	at scala.collection.IterableLike.foreach(IterableLike.scala:74)
+	at scala.collection.IterableLike.foreach$(IterableLike.scala:73)
+	at scala.collection.AbstractIterable.foreach(Iterable.scala:56)
+	at org.apache.spark.executor.Executor.reportHeartBeat(Executor.scala:896)
+	at org.apache.spark.executor.Executor.$anonfun$heartbeater$1(Executor.scala:200)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1932)
+	at org.apache.spark.Heartbeater$$anon$1.run(Heartbeater.scala:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+21/03/12 13:43:49 WARN HeartbeatReceiver: Removing executor driver with no recent heartbeats: 145844 ms exceeds timeout 120000 ms
+21/03/12 13:43:49 WARN SparkContext: Killing executors is not supported by current scheduler.
+trainset
++--------+-----+
+|  genres|count|
++--------+-----+
+|   Drama| 3551|
+|  Comedy| 2508|
+| Romance| 1268|
+|Thriller| 1180|
+|  Action|  977|
++--------+-----+
+only showing top 5 rows
+
+testset
++--------+-----+
+|  genres|count|
++--------+-----+
+|   Drama| 3770|
+|  Comedy| 2246|
+| Romance| 1293|
+|Thriller| 1192|
+|  Action| 1019|
++--------+-----+
+only showing top 5 rows
+
+For the second split with 0.65
+trainset
++--------+-----+
+|  genres|count|
++--------+-----+
+|   Drama| 5786|
+|  Comedy| 3525|
+| Romance| 1921|
+|Thriller| 1735|
+|  Action| 1350|
++--------+-----+
+only showing top 5 rows
+
+testset
++-----------+-----+
+|     genres|count|
++-----------+-----+
+|      Drama| 4648|
+|     Comedy| 2552|
+|   Thriller| 1383|
+|    Romance| 1328|
+|Documentary| 1062|
++-----------+-----+
+only showing top 5 rows
+
+For the second split with 0.8
+trainset
++--------+-----+
+|  genres|count|
++--------+-----+
+|   Drama| 6875|
+|  Comedy| 4278|
+|Thriller| 2193|
+| Romance| 2115|
+|  Action| 1818|
++--------+-----+
+only showing top 5 rows
+
+testset
++--------+-----+
+|  genres|count|
++--------+-----+
+|   Drama| 3956|
+|  Comedy| 2370|
+|Thriller| 1366|
+|  Action| 1082|
+| Romance| 1052|
++--------+-----+
+only showing top 5 rows
+

@@ -1,0 +1,50 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/04/28 09:42:00 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/04/28 09:42:01 INFO SparkContext: Running Spark version 3.0.1
+21/04/28 09:42:01 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/04/28 09:42:01 INFO ResourceUtils: ==============================================================
+21/04/28 09:42:01 INFO ResourceUtils: Resources for spark.driver:
+
+21/04/28 09:42:01 INFO ResourceUtils: ==============================================================
+21/04/28 09:42:01 INFO SparkContext: Submitted application: Q1
+21/04/28 09:42:01 INFO SecurityManager: Changing view acls to: acy20zw
+21/04/28 09:42:01 INFO SecurityManager: Changing modify acls to: acy20zw
+21/04/28 09:42:01 INFO SecurityManager: Changing view acls groups to: 
+21/04/28 09:42:01 INFO SecurityManager: Changing modify acls groups to: 
+21/04/28 09:42:01 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acy20zw); groups with view permissions: Set(); users  with modify permissions: Set(acy20zw); groups with modify permissions: Set()
+21/04/28 09:42:01 INFO Utils: Successfully started service 'sparkDriver' on port 39491.
+21/04/28 09:42:01 INFO SparkEnv: Registering MapOutputTracker
+21/04/28 09:42:01 INFO SparkEnv: Registering BlockManagerMaster
+21/04/28 09:42:01 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/04/28 09:42:01 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/04/28 09:42:01 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/04/28 09:42:02 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acy20zw/blockmgr-8a265d64-72f9-4984-9f2a-f979f498ae4a
+21/04/28 09:42:02 INFO MemoryStore: MemoryStore started with capacity 26.5 GiB
+21/04/28 09:42:02 INFO SparkEnv: Registering OutputCommitCoordinator
+21/04/28 09:42:02 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+21/04/28 09:42:02 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+21/04/28 09:42:02 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node176.shef.ac.uk:4041
+21/04/28 09:42:02 INFO Executor: Starting executor ID driver on host sharc-node176.shef.ac.uk
+21/04/28 09:42:02 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41268.
+21/04/28 09:42:02 INFO NettyBlockTransferService: Server created on sharc-node176.shef.ac.uk:41268
+21/04/28 09:42:02 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/04/28 09:42:02 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node176.shef.ac.uk, 41268, None)
+21/04/28 09:42:02 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node176.shef.ac.uk:41268 with 26.5 GiB RAM, BlockManagerId(driver, sharc-node176.shef.ac.uk, 41268, None)
+21/04/28 09:42:02 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node176.shef.ac.uk, 41268, None)
+21/04/28 09:42:02 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node176.shef.ac.uk, 41268, None)
+21/04/28 09:42:03 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acy20zw/com6012/ScalableML/assignment2/HPC/spark-warehouse').
+21/04/28 09:42:03 INFO SharedState: Warehouse path is 'file:/home/acy20zw/com6012/ScalableML/assignment2/HPC/spark-warehouse'.
+21/04/28 09:42:08 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+21/04/28 10:07:36 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+21/04/28 10:07:36 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+21/04/28 10:08:50 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+21/04/28 10:08:50 WARN LAPACK: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+The mse of the model:98049.91412604763
+The mae of the model:134.74722486143645
+Time of LR model:271.9719066619873
+21/04/28 10:21:11 WARN Instrumentation: [99ba53c0] regParam is zero, which might cause numerical instability and overfitting.
+mse : 74361.81455111143
+mae : 168.77193335745517
+Time: 428.3206925392151

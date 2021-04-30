@@ -1,0 +1,94 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+21/03/12 10:15:58 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+21/03/12 10:16:36 INFO SparkContext: Running Spark version 3.0.1
+21/03/12 10:16:36 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+21/03/12 10:16:36 INFO ResourceUtils: ==============================================================
+21/03/12 10:16:36 INFO ResourceUtils: Resources for spark.driver:
+
+21/03/12 10:16:36 INFO ResourceUtils: ==============================================================
+21/03/12 10:16:36 INFO SparkContext: Submitted application: Q1_A
+21/03/12 10:16:36 INFO SecurityManager: Changing view acls to: acy20zw
+21/03/12 10:16:36 INFO SecurityManager: Changing modify acls to: acy20zw
+21/03/12 10:16:36 INFO SecurityManager: Changing view acls groups to: 
+21/03/12 10:16:36 INFO SecurityManager: Changing modify acls groups to: 
+21/03/12 10:16:36 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acy20zw); groups with view permissions: Set(); users  with modify permissions: Set(acy20zw); groups with modify permissions: Set()
+21/03/12 10:16:37 INFO Utils: Successfully started service 'sparkDriver' on port 35527.
+21/03/12 10:16:38 INFO SparkEnv: Registering MapOutputTracker
+21/03/12 10:16:38 INFO SparkEnv: Registering BlockManagerMaster
+21/03/12 10:16:38 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/03/12 10:16:38 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/03/12 10:16:38 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+21/03/12 10:16:38 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acy20zw/blockmgr-3667442e-134c-460b-9bfe-f4bc3d212242
+21/03/12 10:16:38 INFO MemoryStore: MemoryStore started with capacity 397.5 MiB
+21/03/12 10:16:38 INFO SparkEnv: Registering OutputCommitCoordinator
+21/03/12 10:16:39 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/03/12 10:16:39 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node038.shef.ac.uk:4040
+21/03/12 10:16:39 INFO Executor: Starting executor ID driver on host sharc-node038.shef.ac.uk
+21/03/12 10:16:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33842.
+21/03/12 10:16:40 INFO NettyBlockTransferService: Server created on sharc-node038.shef.ac.uk:33842
+21/03/12 10:16:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/03/12 10:16:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node038.shef.ac.uk, 33842, None)
+21/03/12 10:16:40 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node038.shef.ac.uk:33842 with 397.5 MiB RAM, BlockManagerId(driver, sharc-node038.shef.ac.uk, 33842, None)
+21/03/12 10:16:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node038.shef.ac.uk, 33842, None)
+21/03/12 10:16:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node038.shef.ac.uk, 33842, None)
+21/03/12 10:16:42 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/home/acy20zw/com6012/ScalableML/acy20zw_200206297_AS1/HPC/spark-warehouse').
+21/03/12 10:16:42 INFO SharedState: Warehouse path is 'file:/home/acy20zw/com6012/ScalableML/acy20zw_200206297_AS1/HPC/spark-warehouse'.
+Q1.A
+======================1======================
+There are 13077 hosts form Japanese universities
+======================2======================
+There are 25014 hosts form UK universities
+======================3======================
+There are 218449 hosts form US universities
+Q1_B
+======================1======================
+=====Japan=====
++----------+-----+
+|University|count|
++----------+-----+
+|tohoku    |824  |
+|kyoto-u   |703  |
+|nagoya-u  |692  |
+|u-tokyo   |689  |
+|osaka-u   |527  |
+|shizuoka  |472  |
+|ritsumei  |426  |
+|keio      |346  |
+|waseda    |337  |
++----------+-----+
+only showing top 9 rows
+
+=====uk=====
++----------+-----+
+|University|count|
++----------+-----+
+|hensa     |4257 |
+|rl        |1158 |
+|ucl       |1036 |
+|man       |921  |
+|ic        |851  |
+|soton     |808  |
+|bham      |629  |
+|shef      |623  |
+|le        |616  |
++----------+-----+
+only showing top 9 rows
+
+=====US=====
++----------+-----+
+|University|count|
++----------+-----+
+|tamu      |6062 |
+|berkeley  |5439 |
+|fsu       |4418 |
+|umn       |4404 |
+|mit       |3966 |
+|washington|3893 |
+|uiuc      |3750 |
+|utexas    |3665 |
+|cmu       |3244 |
++----------+-----+
+only showing top 9 rows
+
